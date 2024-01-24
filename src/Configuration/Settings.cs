@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using JetBrains.Annotations;
 
-namespace NFive.LogViewer.Configuration
+namespace JSX.LogViewer.Configuration
 {
 	[PublicAPI]
 	public class Settings : YamlSettings<Settings>

@@ -2,9 +2,9 @@ using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using NFive.LogViewer.Configuration;
+using JSX.LogViewer.Configuration;
 
-namespace NFive.LogViewer
+namespace JSX.LogViewer
 {
 	public partial class Preferences : Form
 	{

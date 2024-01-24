@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using JetBrains.Annotations;
-using NFive.LogViewer.Configuration;
+using JSX.LogViewer.Configuration;
 using ScintillaNET;
 using WeifenLuo.WinFormsUI.Docking;
 
-namespace NFive.LogViewer
+namespace JSX.LogViewer
 {
 	public partial class RichPanel : DockContent
 	{

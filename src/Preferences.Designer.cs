@@ -1,4 +1,4 @@
-namespace NFive.LogViewer
+namespace JSX.LogViewer
 {
 	partial class Preferences
 	{

@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.IO;
 using JetBrains.Annotations;
 
-namespace NFive.LogViewer
+namespace JSX.LogViewer
 {
 	public class LogFileMonitorLineEventArgs : EventArgs
 	{

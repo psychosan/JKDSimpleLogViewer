@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace NFive.LogViewer
+namespace JSX.LogViewer
 {
 	public partial class GoTo : Form
 	{

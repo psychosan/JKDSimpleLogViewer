@@ -3,7 +3,7 @@ using System.IO;
 using JetBrains.Annotations;
 using YamlDotNet.Serialization;
 
-namespace NFive.LogViewer.Configuration
+namespace JSX.LogViewer.Configuration
 {
 	[PublicAPI]
 	public abstract class YamlSettings<T> : ISettings<T> where T : class, ISettings<T>, new()

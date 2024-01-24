@@ -1,7 +1,4 @@
-using System.Drawing;
-using WeifenLuo.WinFormsUI.Docking;
-
-namespace NFive.LogViewer
+namespace JSX.LogViewer
 {
 	partial class Main
 	{
@@ -61,6 +58,12 @@ namespace NFive.LogViewer
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectToFiveMServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectToNuiDebuggerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addParserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editParserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Parser0 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Parser1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Parser2 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
@@ -145,6 +148,7 @@ namespace NFive.LogViewer
             this.viewToolStripMenuItem,
             this.windowsToolStripMenuItem,
             this.toolsToolStripMenuItem,
+            this.parsersToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -223,35 +227,35 @@ namespace NFive.LogViewer
             this.copyToolStripMenuItem.Enabled = false;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.copyToolStripMenuItem.Text = "&Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.CopyToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(161, 6);
             // 
             // goToToolStripMenuItem
             // 
             this.goToToolStripMenuItem.Enabled = false;
             this.goToToolStripMenuItem.Name = "goToToolStripMenuItem";
             this.goToToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.goToToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.goToToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.goToToolStripMenuItem.Text = "&Go To...";
             this.goToToolStripMenuItem.Click += new System.EventHandler(this.GoToToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(161, 6);
             // 
             // selectAllToolStripMenuItem
             // 
             this.selectAllToolStripMenuItem.Enabled = false;
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
             this.selectAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.selectAllToolStripMenuItem.Text = "Select &All";
             this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.SelectAllToolStripMenuItem_Click);
             // 
@@ -418,9 +422,11 @@ namespace NFive.LogViewer
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connectToFiveMServerToolStripMenuItem,
-            this.connectToNuiDebuggerToolStripMenuItem});
+            this.connectToNuiDebuggerToolStripMenuItem,
+            this.addParserToolStripMenuItem,
+            this.editParserToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
             // connectToFiveMServerToolStripMenuItem
@@ -436,6 +442,54 @@ namespace NFive.LogViewer
             this.connectToNuiDebuggerToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.connectToNuiDebuggerToolStripMenuItem.Text = "Connect to &NUI debugger";
             this.connectToNuiDebuggerToolStripMenuItem.Click += new System.EventHandler(this.ConnectToNuiDebuggerToolStripMenuItem_Click);
+            // 
+            // addParserToolStripMenuItem
+            // 
+            this.addParserToolStripMenuItem.Name = "addParserToolStripMenuItem";
+            this.addParserToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.addParserToolStripMenuItem.Text = "&Add Parser";
+            // 
+            // editParserToolStripMenuItem
+            // 
+            this.editParserToolStripMenuItem.Name = "editParserToolStripMenuItem";
+            this.editParserToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.editParserToolStripMenuItem.Text = "&Edit Parser";
+            // 
+            // parsersToolStripMenuItem
+            // 
+            this.parsersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Parser0,
+            this.Parser1,
+            this.Parser2});
+            this.parsersToolStripMenuItem.Name = "parsersToolStripMenuItem";
+            this.parsersToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.parsersToolStripMenuItem.Text = "&Parsers";
+            // 
+            // Parser0
+            // 
+            this.Parser0.Checked = true;
+            this.Parser0.CheckOnClick = true;
+            this.Parser0.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Parser0.Name = "Parser0";
+            this.Parser0.Size = new System.Drawing.Size(180, 22);
+            this.Parser0.Text = "Default";
+            this.Parser0.Click += new System.EventHandler(this.Parser_Click);
+            // 
+            // Parser1
+            // 
+            this.Parser1.CheckOnClick = true;
+            this.Parser1.Name = "Parser1";
+            this.Parser1.Size = new System.Drawing.Size(180, 22);
+            this.Parser1.Text = "Parser 1";
+            this.Parser1.Click += new System.EventHandler(this.Parser_Click);
+            // 
+            // Parser2
+            // 
+            this.Parser2.CheckOnClick = true;
+            this.Parser2.Name = "Parser2";
+            this.Parser2.Size = new System.Drawing.Size(180, 22);
+            this.Parser2.Text = "Parser 2";
+            this.Parser2.Click += new System.EventHandler(this.Parser_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -461,7 +515,6 @@ namespace NFive.LogViewer
             this.Controls.Add(this.dockPanel);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
-            this.Icon = global::NFive.LogViewer.Properties.Resources.icon;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.MinimumSize = new System.Drawing.Size(400, 200);
@@ -531,5 +584,11 @@ namespace NFive.LogViewer
 		private System.Windows.Forms.ToolStripMenuItem connectToNuiDebuggerToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 		private System.Windows.Forms.ToolStripMenuItem goToToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem parsersToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem Parser0;
+		private System.Windows.Forms.ToolStripMenuItem addParserToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem editParserToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem Parser1;
+		private System.Windows.Forms.ToolStripMenuItem Parser2;
 	}
 }

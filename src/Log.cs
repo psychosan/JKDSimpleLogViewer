@@ -1,6 +1,6 @@
 using System;
 
-namespace NFive.LogViewer
+namespace JSX.LogViewer
 {
 	public class Log
 	{

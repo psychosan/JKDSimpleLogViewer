@@ -9,10 +9,10 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using NFive.LogViewer.Configuration;
+using JSX.LogViewer.Configuration;
 using WeifenLuo.WinFormsUI.Docking;
 
-namespace NFive.LogViewer
+namespace JSX.LogViewer
 {
 	public partial class Main : Form
 	{
@@ -725,5 +725,30 @@ namespace NFive.LogViewer
 				form.ShowDialog();
 			}
 		}
+
+		private void Parser_Click(object sender, EventArgs e)
+        {
+            // Cast sender to ToolStripItem to get the clicked item
+            var clickedItem = (ToolStripMenuItem)sender;
+
+            // Get the parent menu item
+            var parentItem = clickedItem.OwnerItem;
+
+            if (parentItem != null && parentItem is ToolStripMenuItem)
+            {
+                // Iterate through the child items of the parent menu item
+                foreach (ToolStripMenuItem childItem in ((ToolStripMenuItem)parentItem).DropDownItems)
+                {
+                    // Uncheck any item that is currently checked
+                    childItem.Checked = false;
+                }
+
+                // Check the currently clicked item
+                clickedItem.Checked = true;
+				
+                // Perform your specific action for the clicked item
+                // Add your logic here based on the clicked item
+            }
+        }
 	}
 }

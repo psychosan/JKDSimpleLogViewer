@@ -4,7 +4,7 @@ using YamlDotNet.Core;
 using YamlDotNet.Core.Events;
 using YamlDotNet.Serialization;
 
-namespace NFive.LogViewer.Configuration
+namespace JSX.LogViewer.Configuration
 {
 	public class FontConverter : IYamlTypeConverter
 	{

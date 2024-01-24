@@ -1,6 +1,6 @@
 using System.Drawing;
 
-namespace NFive.LogViewer.Configuration
+namespace JSX.LogViewer.Configuration
 {
 	public static class ColorExtensions
 	{

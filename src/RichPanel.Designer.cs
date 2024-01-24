@@ -1,6 +1,4 @@
-using ScintillaNET;
-
-namespace NFive.LogViewer
+namespace JSX.LogViewer
 {
 	partial class RichPanel
 	{
@@ -49,7 +47,6 @@ namespace NFive.LogViewer
 			this.Controls.Add(this.scintilla);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "RichPanel";
-			this.Icon = global::NFive.LogViewer.Properties.Resources.icon;
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.ResumeLayout(false);

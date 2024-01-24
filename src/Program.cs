@@ -1,8 +1,8 @@
 using System;
 using System.Windows.Forms;
-using NFive.LogViewer.Configuration;
+using JSX.LogViewer.Configuration;
 
-namespace NFive.LogViewer
+namespace JSX.LogViewer
 {
 	public static class Program
 	{
